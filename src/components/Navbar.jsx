@@ -60,7 +60,7 @@ const Navbar = ({ onOpenCVModal }) => {
             className="flex items-center gap-2 group cursor-pointer focus:outline-none"
           >
             <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[var(--color-primary)] to-[var(--color-secondary)] p-0.5 shadow-lg group-hover:shadow-[var(--color-glow)] transition-all duration-300 overflow-hidden">
-              <img src={awaisImage} alt="Awais" className="w-full h-full object-cover rounded-[10px]" />
+              <img src={awaisImage} alt="Awais" className="w-full h-full object-cover object-top rounded-[10px]" />
             </div>
             <div className="flex flex-col">
               <span className="text-lg font-bold tracking-tight text-[var(--color-text)] flex items-center gap-1">

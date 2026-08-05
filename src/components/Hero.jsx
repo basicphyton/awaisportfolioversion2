@@ -163,66 +163,53 @@ const Hero = ({ onOpenCVModal }) => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="lg:col-span-5 flex justify-center relative"
           >
-            <div className="relative w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96">
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-[var(--color-primary)] via-[var(--color-secondary)] to-[var(--color-accent)] opacity-40 blur-2xl animate-pulse-slow" />
-              
-              <div className="relative w-full h-full rounded-3xl glass-card p-3 border-2 border-[var(--color-border)] shadow-2xl flex flex-col justify-between overflow-hidden group">
-                
-                <div className="relative w-full h-full rounded-2xl overflow-hidden bg-gradient-to-b from-[var(--color-primary)]/20 to-[var(--color-bg)] flex items-center justify-center">
-                  
-                  <div className="absolute inset-0 opacity-20">
-                    <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                      <circle cx="50" cy="50" r="40" stroke="var(--color-primary)" strokeWidth="0.5" fill="none" />
-                      <circle cx="50" cy="50" r="30" stroke="var(--color-secondary)" strokeWidth="0.5" fill="none" />
-                    </svg>
-                  </div>
+            <div className="relative">
+              {/* Glow behind image */}
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-[var(--color-primary)] via-[var(--color-secondary)] to-[var(--color-accent)] opacity-50 blur-3xl animate-pulse-slow scale-105" />
 
-                  <div className="relative z-10 flex flex-col items-center justify-center p-6 text-center">
-                    <div className="w-36 h-36 sm:w-44 sm:h-44 rounded-full p-1 bg-gradient-to-tr from-[var(--color-primary)] via-[var(--color-secondary)] to-[var(--color-accent)] shadow-2xl mb-4 relative overflow-hidden group-hover:scale-105 transition-transform duration-500">
-                      <img 
-                        src={awaisImage} 
-                        alt="Muhammad Awais" 
-                        className="w-full h-full object-cover rounded-full shadow-inner"
-                      />
-                    </div>
-
-                    <h3 className="text-xl font-bold text-white tracking-tight">Muhammad Awais</h3>
-                    <p className="text-xs text-[var(--color-primary)] font-mono mt-1">Full-Stack Engineer</p>
-
-                    <div className="mt-3 flex items-center gap-2">
-                      <span className="px-2.5 py-1 rounded-md text-[10px] font-semibold bg-[var(--color-primary)]/20 text-[var(--color-primary)] border border-[var(--color-primary)]/30">
-                        React Specialist
-                      </span>
-                      <span className="px-2.5 py-1 rounded-md text-[10px] font-semibold bg-[var(--color-secondary)]/20 text-[var(--color-secondary)] border border-[var(--color-secondary)]/30">
-                        Node.js Architect
-                      </span>
-                    </div>
-                  </div>
+              {/* Main Portrait Card */}
+              <div className="relative w-64 sm:w-72 md:w-80 rounded-3xl p-[3px] bg-gradient-to-tr from-[var(--color-primary)] via-[var(--color-secondary)] to-[var(--color-accent)] shadow-2xl group">
+                <div className="w-full rounded-3xl overflow-hidden bg-[var(--color-bg)]">
+                  <img
+                    src={awaisImage}
+                    alt="Muhammad Awais"
+                    className="w-full h-auto object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                    style={{ aspectRatio: '3/4' }}
+                  />
                 </div>
-
-                <div className="absolute top-4 left-4 p-2.5 rounded-xl glass-card border border-white/20 shadow-lg flex items-center gap-2 animate-float">
-                  <div className="p-1.5 rounded-lg bg-[var(--color-primary)]/20 text-[var(--color-primary)]">
-                    <Cpu className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <div className="text-[10px] text-[var(--color-muted)] font-bold uppercase">Focus</div>
-                    <div className="text-xs font-bold text-white">MERN & Next.js</div>
-                  </div>
-                </div>
-
-                <div className="absolute bottom-4 right-4 p-2.5 rounded-xl glass-card border border-white/20 shadow-lg flex items-center gap-2 animate-float" style={{ animationDelay: '1.5s' }}>
-                  <div className="p-1.5 rounded-lg bg-emerald-500/20 text-emerald-400">
-                    <CheckCircle2 className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <div className="text-[10px] text-[var(--color-muted)] font-bold uppercase">Experience</div>
-                    <div className="text-xs font-bold text-white">3+ Years Pro</div>
-                  </div>
-                </div>
-
               </div>
+
+              {/* Floating Badge — Top Left */}
+              <div className="absolute -top-4 -left-6 p-2.5 rounded-xl glass-card border border-white/20 shadow-lg flex items-center gap-2 animate-float z-10">
+                <div className="p-1.5 rounded-lg bg-[var(--color-primary)]/20 text-[var(--color-primary)]">
+                  <Cpu className="w-4 h-4" />
+                </div>
+                <div>
+                  <div className="text-[10px] text-[var(--color-muted)] font-bold uppercase">Focus</div>
+                  <div className="text-xs font-bold text-white">MERN & Next.js</div>
+                </div>
+              </div>
+
+              {/* Floating Badge — Bottom Right */}
+              <div className="absolute -bottom-4 -right-6 p-2.5 rounded-xl glass-card border border-white/20 shadow-lg flex items-center gap-2 animate-float z-10" style={{ animationDelay: '1.5s' }}>
+                <div className="p-1.5 rounded-lg bg-emerald-500/20 text-emerald-400">
+                  <CheckCircle2 className="w-4 h-4" />
+                </div>
+                <div>
+                  <div className="text-[10px] text-[var(--color-muted)] font-bold uppercase">Experience</div>
+                  <div className="text-xs font-bold text-white">3+ Years Pro</div>
+                </div>
+              </div>
+
+              {/* Name tag at bottom */}
+              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 px-4 py-2 rounded-xl glass-card border border-white/20 shadow-xl backdrop-blur-md text-center whitespace-nowrap z-10">
+                <div className="text-sm font-bold text-white">Muhammad Awais</div>
+                <div className="text-[10px] text-[var(--color-primary)] font-mono">Full-Stack Engineer</div>
+              </div>
+
             </div>
           </motion.div>
+
 
         </div>
       </div>
