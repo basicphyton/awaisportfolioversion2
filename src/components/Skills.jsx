@@ -118,30 +118,16 @@ const Skills = () => {
                 </span>
               </h3>
 
-              <div className="space-y-5">
+              <div className="flex flex-wrap gap-3">
                 {section.skills.map((skill) => {
                   const IconComponent = iconMap[skill.icon] || Code2;
                   return (
-                    <div key={skill.name} className="space-y-1.5">
-                      <div className="flex items-center justify-between text-xs sm:text-sm">
-                        <span className="flex items-center gap-2 font-medium text-white">
-                          <IconComponent className="w-4 h-4 text-[var(--color-primary)]" />
-                          {skill.name}
-                        </span>
-                        <span className="font-mono text-xs text-[var(--color-primary)] font-bold">
-                          {skill.level}%
-                        </span>
-                      </div>
-
-                      <div className="w-full h-2 rounded-full bg-white/10 overflow-hidden relative p-0.5">
-                        <motion.div
-                          initial={{ width: 0 }}
-                          whileInView={{ width: `${skill.level}%` }}
-                          viewport={{ once: true }}
-                          transition={{ duration: 1, ease: 'easeOut' }}
-                          className="h-full rounded-full bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-secondary)] shadow-sm"
-                        />
-                      </div>
+                    <div
+                      key={skill.name}
+                      className="flex items-center gap-2 px-3.5 py-2 rounded-xl glass-card border border-white/10 hover:border-[var(--color-primary)] hover:bg-[var(--color-primary)]/10 transition-all duration-300 group cursor-default"
+                    >
+                      <IconComponent className="w-4 h-4 text-[var(--color-primary)] group-hover:scale-110 transition-transform duration-300" />
+                      <span className="text-sm font-medium text-white">{skill.name}</span>
                     </div>
                   );
                 })}

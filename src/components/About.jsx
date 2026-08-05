@@ -97,26 +97,51 @@ const About = () => {
             </div>
           </motion.div>
 
-          {/* Stats Metrics Cards */}
-          <div className="lg:col-span-5 grid grid-cols-2 gap-4">
-            {personalInfo.stats.map((stat, idx) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="p-6 rounded-2xl glass-card border border-[var(--color-border)] flex flex-col justify-center items-center text-center hover:border-[var(--color-primary)] transition-all group"
-              >
-                <div className="text-3xl sm:text-4xl font-extrabold gradient-text group-hover:scale-110 transition-transform duration-300">
-                  {stat.value}
-                </div>
-                <div className="text-xs sm:text-sm text-[var(--color-muted)] font-medium mt-2">
-                  {stat.label}
-                </div>
-              </motion.div>
-            ))}
-          </div>
+          {/* Personal Info Writing Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="lg:col-span-5 p-8 rounded-3xl glass-card border border-[var(--color-border)] flex flex-col justify-between"
+          >
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+                <Award className="w-6 h-6 text-[var(--color-primary)]" />
+                What Drives Me
+              </h3>
+              <div className="space-y-4 text-[var(--color-muted)] leading-relaxed text-sm sm:text-base">
+                <p>
+                  Beyond writing code, I'm deeply passionate about <strong className="text-white font-semibold">problem-solving at scale</strong> — engineering systems that handle real-world complexity while staying elegant and maintainable.
+                </p>
+                <p>
+                  I believe great software is a blend of <span className="text-[var(--color-primary)] font-mono font-medium">technical precision</span> and <span className="text-[var(--color-secondary)] font-mono font-medium">human empathy</span>. Every feature I build, I ask: <em className="text-white">"Does this make the user's life simpler?"</em>
+                </p>
+                <p>
+                  My goal is to continually grow as an engineer — contributing to impactful open-source projects, building products that matter, and collaborating with teams that value craft.
+                </p>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 gap-3 mt-8 pt-6 border-t border-white/10">
+              <div className="flex flex-col gap-1">
+                <span className="text-2xl font-extrabold gradient-text">3+</span>
+                <span className="text-xs text-[var(--color-muted)]">Years Experience</span>
+              </div>
+              <div className="flex flex-col gap-1">
+                <span className="text-2xl font-extrabold gradient-text">35+</span>
+                <span className="text-xs text-[var(--color-muted)]">Projects Completed</span>
+              </div>
+              <div className="flex flex-col gap-1">
+                <span className="text-2xl font-extrabold gradient-text">25+</span>
+                <span className="text-xs text-[var(--color-muted)]">Happy Clients</span>
+              </div>
+              <div className="flex flex-col gap-1">
+                <span className="text-2xl font-extrabold gradient-text">2,400+</span>
+                <span className="text-xs text-[var(--color-muted)]">Code Commits</span>
+              </div>
+            </div>
+          </motion.div>
 
         </div>
 
