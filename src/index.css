@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Color Themes Definitions */
+:root[data-theme="violet"] {
+  --color-bg: #090d16;
+  --color-card: rgba(18, 24, 40, 0.75);
+  --color-card-hover: rgba(30, 41, 67, 0.85);
+  --color-border: rgba(139, 92, 246, 0.2);
+  --color-primary: #8b5cf6; /* Violet */
+  --color-primary-hover: #7c3aed;
+  --color-secondary: #3b82f6; /* Blue */
+  --color-accent: #ec4899; /* Pink */
+  --color-text: #f3f4f6;
+  --color-muted: #9ca3af;
+  --color-glow: rgba(139, 92, 246, 0.35);
+  --gradient-main: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+  --gradient-accent: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);
+}
+
+:root[data-theme="emerald"] {
+  --color-bg: #061412;
+  --color-card: rgba(12, 34, 30, 0.75);
+  --color-card-hover: rgba(19, 54, 48, 0.85);
+  --color-border: rgba(16, 185, 129, 0.25);
+  --color-primary: #10b981; /* Emerald */
+  --color-primary-hover: #059669;
+  --color-secondary: #06b6d4; /* Cyan */
+  --color-accent: #84cc16; /* Lime */
+  --color-text: #f0fdf4;
+  --color-muted: #94a3b8;
+  --color-glow: rgba(16, 185, 129, 0.35);
+  --gradient-main: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
+  --gradient-accent: linear-gradient(135deg, #84cc16 0%, #10b981 100%);
+}
+
+:root[data-theme="sunset"] {
+  --color-bg: #180a0a;
+  --color-card: rgba(38, 17, 21, 0.75);
+  --color-card-hover: rgba(58, 25, 31, 0.85);
+  --color-border: rgba(244, 63, 94, 0.25);
+  --color-primary: #f43f5e; /* Rose */
+  --color-primary-hover: #e11d48;
+  --color-secondary: #f59e0b; /* Amber */
+  --color-accent: #a855f7; /* Purple */
+  --color-text: #fff1f2;
+  --color-muted: #cbd5e1;
+  --color-glow: rgba(244, 63, 94, 0.35);
+  --gradient-main: linear-gradient(135deg, #f43f5e 0%, #f59e0b 100%);
+  --gradient-accent: linear-gradient(135deg, #a855f7 0%, #f43f5e 100%);
+}
+
+:root[data-theme="sapphire"] {
+  --color-bg: #0b132b;
+  --color-card: rgba(28, 37, 65, 0.75);
+  --color-card-hover: rgba(42, 55, 94, 0.85);
+  --color-border: rgba(56, 189, 248, 0.25);
+  --color-primary: #38bdf8; /* Sky Blue */
+  --color-primary-hover: #0284c7;
+  --color-secondary: #6366f1; /* Indigo */
+  --color-accent: #2dd4bf; /* Teal */
+  --color-text: #f0f9ff;
+  --color-muted: #94a3b8;
+  --color-glow: rgba(56, 189, 248, 0.35);
+  --gradient-main: linear-gradient(135deg, #38bdf8 0%, #6366f1 100%);
+  --gradient-accent: linear-gradient(135deg, #2dd4bf 0%, #38bdf8 100%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+
+/* Glassmorphism utility */
+.glass-card {
+  background: var(--color-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 12px 40px -10px var(--color-glow);
+}
+
+.glass-nav {
+  background: rgba(9, 13, 22, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Gradient Text Utility */
+.gradient-text {
+  background: var(--gradient-main);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-accent {
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom Glow Button */
+.btn-glow {
+  background: var(--gradient-main);
+  color: #ffffff;
+  box-shadow: 0 0 20px -5px var(--color-glow);
+  transition: all 0.3s ease;
+}
+
+.btn-glow:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px 2px var(--color-glow);
+}
