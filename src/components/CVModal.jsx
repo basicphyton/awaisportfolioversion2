@@ -112,7 +112,7 @@ const CVModal = ({ isOpen, onClose }) => {
                 Executive Summary
               </h3>
               <p className="text-xs sm:text-sm text-[var(--color-muted)] leading-relaxed">
-                Full-Stack Software Engineer with 3+ years of hands-on experience in building, testing, and deploying robust scalable web solutions. Expert in React.js, Next.js, Node.js, Express, MongoDB, and modern frontend styling architecture. Proven track record of delivering high-quality production code with exceptional performance and clean UI/UX standards.
+                Full-Stack & AI Software Engineer with 2+ years of hands-on experience in building, testing, and deploying robust scalable web solutions and Python intelligent applications. Completed 3-month Full Stack AI Engineer Internship at Falcon Swift Software House. Expert in React.js, Python, Node.js, FastAPI, Express, MongoDB, and modern software architecture.
               </p>
             </div>
 

@@ -68,7 +68,7 @@ const About = () => {
                   I'm <strong className="text-white font-semibold">Muhammad Awais</strong>, a Full-Stack Engineer who specializes in building modern web applications that blend sleek UI design with robust backend architecture.
                 </p>
                 <p>
-                  My journey began with a curiosity for how web software scales under high user demand. Over the past 3+ years, I have architected and deployed applications ranging from real-time SaaS dashboards and e-commerce platforms to AI generative studios.
+                  My journey began with a curiosity for how web software scales under high user demand. Over the past 2+ years, I have architected and deployed applications ranging from real-time SaaS dashboards and e-commerce platforms to AI generative studios and Python enterprise tools.
                 </p>
                 <p>
                   I thrive in fast-paced environments where I can leverage cutting-edge tools like <span className="text-[var(--color-primary)] font-mono font-medium">React, Next.js, Node.js, Express, and Tailwind CSS</span> to turn complex ideas into seamless web solutions.
@@ -125,7 +125,7 @@ const About = () => {
 
             <div className="grid grid-cols-2 gap-3 mt-8 pt-6 border-t border-white/10">
               <div className="flex flex-col gap-1">
-                <span className="text-2xl font-extrabold gradient-text">3+</span>
+                <span className="text-2xl font-extrabold gradient-text">{personalInfo.stats[0].value}</span>
                 <span className="text-xs text-[var(--color-muted)]">Years Experience</span>
               </div>
               <div className="flex flex-col gap-1">

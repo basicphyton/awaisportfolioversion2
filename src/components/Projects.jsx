@@ -7,7 +7,7 @@ import { projectsData } from '../data/portfolioData';
 const Projects = ({ onSelectProject }) => {
   const [activeFilter, setActiveFilter] = useState('All');
 
-  const categories = ['All', 'Full Stack', 'React', 'UI/UX'];
+  const categories = ['All', 'Full Stack', 'Python', 'React', 'UI/UX'];
 
   const filteredProjects = activeFilter === 'All'
     ? projectsData

@@ -1,11 +1,11 @@
 export const personalInfo = {
   name: "Muhammad Awais",
-  title: "Full-Stack Developer & UI/UX Engineer",
+  title: "Full-Stack & AI Engineer",
   roles: [
     "Full-Stack Web Developer",
-    "React & Node.js Specialist",
-    "Frontend Architect",
-    "UI/UX Enthusiast"
+    "Full Stack AI Engineer",
+    "Python Developer",
+    "React & Node.js Specialist"
   ],
   location: "Multan, Pakistan",
   email: "muhammadawais760a@gmail.com",
@@ -14,12 +14,12 @@ export const personalInfo = {
   linkedin: "https://www.linkedin.com/in/muhammad-awais-133689345/",
   whatsapp: "https://wa.me/923070560260",
   availability: "Available for Projects",
-  bio: "Passionate Full-Stack Developer with over 3+ years of experience crafting high-performance, scalable web applications. Dedicated to writing clean, maintainable code, building responsive interfaces with React & Tailwind CSS, and designing seamless user experiences.",
+  bio: "Passionate Full-Stack Developer & AI Engineer with 2+ years of experience building scalable, high-performance web applications and Python intelligent systems. Completed 3-Month Full Stack AI Engineer Internship at Falcon Swift Software House — driven to craft data-powered applications using React, Node.js, Python, and cutting-edge AI technologies.",
   stats: [
-    { label: "Years Experience", value: "3+" },
-    { label: "Projects Completed", value: "35+" },
+    { label: "Years Experience", value: "2+" },
+    { label: "Projects Completed", value: "38+" },
     { label: "Satisfied Clients", value: "25+" },
-    { label: "Code Commits", value: "2,400+" }
+    { label: "Code Commits", value: "2,500+" }
   ]
 };
 
@@ -38,12 +38,13 @@ export const skillsData = [
     ]
   },
   {
-    category: "Backend & APIs",
+    category: "Backend & AI",
     skills: [
+      { name: "Python", level: 92, icon: "Terminal" },
       { name: "Node.js", level: 88, icon: "Server" },
       { name: "Express.js", level: 90, icon: "Cpu" },
       { name: "RESTful APIs", level: 92, icon: "Zap" },
-      { name: "GraphQL", level: 80, icon: "Share2" },
+      { name: "FastAPI / Flask", level: 85, icon: "Share2" },
       { name: "JWT / OAuth Auth", level: 88, icon: "Lock" }
     ]
   },
@@ -51,10 +52,10 @@ export const skillsData = [
     category: "Databases & Cloud",
     skills: [
       { name: "MongoDB", level: 88, icon: "Database" },
-      { name: "PostgreSQL", level: 82, icon: "HardDrive" },
+      { name: "PostgreSQL / SQL", level: 85, icon: "HardDrive" },
+      { name: "SQLite", level: 90, icon: "Database" },
       { name: "Firebase", level: 85, icon: "Flame" },
-      { name: "AWS (S3, EC2)", level: 75, icon: "Cloud" },
-      { name: "Docker", level: 78, icon: "Container" }
+      { name: "AWS (S3, EC2)", level: 75, icon: "Cloud" }
     ]
   },
   {
@@ -141,51 +142,111 @@ export const projectsData = [
     liveUrl: "https://example.com/taskpulse",
     githubUrl: "https://github.com/muhammadawais/taskpulse-kanban",
     featured: false
+  },
+  {
+    id: 7,
+    title: "Login Authentication System",
+    category: "Full Stack",
+    description: "Secure user authentication system built on SQL with JWT-based login, registration, role-based access control, and session management.",
+    longDescription: "A robust full-stack authentication solution featuring secure user registration, hashed password storage (bcrypt), JWT token-based login, role-based access control (admin/user), session expiry handling, and a clean React dashboard UI — all backed by a relational SQL database (MySQL/PostgreSQL).",
+    image: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&w=800&q=80",
+    tags: ["React", "Node.js", "Express.js", "SQL", "JWT", "bcrypt"],
+    liveUrl: "#",
+    githubUrl: "https://github.com/mawais066/login-auth-system",
+    featured: true
+  },
+  {
+    id: 8,
+    title: "College Transport Management System",
+    category: "Full Stack",
+    description: "A comprehensive college transport management system with real-time route tracking, student seat booking, driver management, and an admin control panel.",
+    longDescription: "Designed and developed a full-featured College Transport Management System enabling students to book seats, track bus routes in real-time, and receive arrival notifications. The admin panel supports driver management, route planning, schedule management, and report generation — all powered by a SQL relational database.",
+    image: "https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=800&q=80",
+    tags: ["React", "Node.js", "Express.js", "SQL", "Real-Time Tracking"],
+    liveUrl: "#",
+    githubUrl: "https://github.com/mawais066/college-transport-system",
+    featured: true
+  },
+  {
+    id: 9,
+    title: "Banking Management System",
+    category: "Python",
+    description: "Secure Python-based banking solution featuring account creation, fund transfers, transaction logs, and encrypted database management.",
+    longDescription: "A robust Banking Management System engineered in Python with SQLite and desktop GUI/CLI interfaces. Features secure PIN hashing, multi-account ledger management, real-time balance calculations, deposit/withdrawal workflows, and detailed audit logging.",
+    image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
+    tags: ["Python", "SQLite", "OOP", "Tkinter", "Cryptography"],
+    liveUrl: "#",
+    githubUrl: "https://github.com/mawais066/banking-management-system-python",
+    featured: true
+  },
+  {
+    id: 10,
+    title: "Vehicle Management System",
+    category: "Python",
+    description: "Automated Python fleet tracking application for vehicle allocation, maintenance scheduling, fuel logs, and driver management.",
+    longDescription: "Engineered an end-to-end Vehicle Management System in Python to streamline vehicle allocation, maintenance reminders, fuel consumption records, driver assignments, and trip history reporting with relational database persistence.",
+    image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=800&q=80",
+    tags: ["Python", "SQL", "OOP", "Fleet Management", "CLI/GUI"],
+    liveUrl: "#",
+    githubUrl: "https://github.com/mawais066/vehicle-management-system-python",
+    featured: true
+  },
+  {
+    id: 11,
+    title: "Library Management System",
+    category: "Python",
+    description: "Comprehensive Python library automation tool for cataloging books, managing member borrowings, fine calculation, and search indexing.",
+    longDescription: "A feature-rich Library Management System built with Python and relational database storage. Includes automated book issuance and return tracking, overdue fine calculation, ISBN search indexing, member membership tiering, and analytical reports.",
+    image: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=800&q=80",
+    tags: ["Python", "SQLite", "OOP", "Data Structures", "File Handling"],
+    liveUrl: "#",
+    githubUrl: "https://github.com/mawais066/library-management-system-python",
+    featured: true
   }
 ];
 
 export const experienceData = [
   {
     id: 1,
-    role: "Senior Full-Stack Developer",
+    role: "Full-Stack & AI Developer",
     company: "TechNova Solutions",
     location: "Lahore, PK (Hybrid)",
-    period: "2024 - Present",
-    description: "Leading the frontend and backend architecture of core client web applications.",
+    period: "2024 - Present (1 Year)",
+    description: "Leading the frontend and backend architecture of core client web applications and REST APIs.",
     achievements: [
-      "Architected scalable microservices using React, Node.js, and MongoDB, resulting in a 40% improvement in API response times.",
-      "Mentored a team of 4 junior developers on modern React component design patterns and clean code practices.",
+      "Architected scalable microservices using React, Python, Node.js, and MongoDB.",
+      "Mentored junior developers on modern React component design patterns and clean code practices.",
       "Implemented automated CI/CD deployment pipelines on Vercel and AWS EC2."
     ],
-    tech: ["React", "Next.js", "Node.js", "MongoDB", "AWS", "Tailwind CSS"]
+    tech: ["React", "Python", "Node.js", "MongoDB", "AWS", "Tailwind CSS"]
   },
   {
     id: 2,
-    role: "Frontend Developer",
-    company: "PixelCraft Studios",
-    location: "Remote",
-    period: "2023 - 2024",
-    description: "Specialized in creating responsive pixel-perfect web applications and component design systems.",
+    role: "Full Stack AI Engineer Intern",
+    company: "Falcon Swift Software House",
+    location: "Multan / Remote, PK",
+    period: "3 Months Internship (2024 - 2025)",
+    description: "Completed intensive 3-month Full Stack AI Engineer Internship working on intelligent web applications and AI model integration.",
     achievements: [
-      "Developed over 20+ responsive UI web applications using React and Tailwind CSS with complex state management.",
-      "Engineered sleek Framer Motion animations and glassmorphic UI elements for premium SaaS landing pages.",
-      "Optimized Web Vitals score by 35% through lazy loading, code splitting, and asset compression."
+      "Integrated machine learning models with FastAPI REST endpoints and interactive React dashboards.",
+      "Developed responsive frontend interfaces with automated real-time data visualizers.",
+      "Earned official Full Stack AI Engineer Internship Certificate from Falcon Swift Software House."
     ],
-    tech: ["React", "JavaScript", "Tailwind CSS", "Framer Motion", "Redux Toolkit"]
+    tech: ["Python", "React", "AI/ML", "FastAPI", "REST APIs", "Tailwind CSS"]
   },
   {
     id: 3,
-    role: "Junior Web Developer",
-    company: "InnoSoft Digital",
-    location: "Lahore, PK",
-    period: "2022 - 2023",
-    description: "Built client landing pages, REST API integrations, and database schemas.",
+    role: "Software Developer",
+    company: "PixelCraft Studios",
+    location: "Remote",
+    period: "2023 - 2024 (1 Year)",
+    description: "Specialized in creating responsive pixel-perfect web applications and Python automation tools.",
     achievements: [
-      "Integrated third-party RESTful APIs and authentication flows with JWT token handling.",
-      "Collaborated with UI/UX designers to translate Figma design mockups into pixel-perfect React code.",
-      "Resolved frontend cross-browser compatibility issues and bugs across 15+ web projects."
+      "Developed over 20+ responsive UI web applications using React, Python, and Tailwind CSS.",
+      "Engineered sleek Framer Motion animations and glassmorphic UI elements for SaaS landing pages.",
+      "Optimized Web Vitals score by 35% through lazy loading, code splitting, and asset compression."
     ],
-    tech: ["JavaScript", "React", "Express.js", "HTML5/CSS3", "Git"]
+    tech: ["Python", "React", "JavaScript", "Tailwind CSS", "Framer Motion"]
   }
 ];
 
@@ -218,38 +279,12 @@ export const educationData = [
 export const certificatesData = [
   {
     id: 1,
-    title: "Meta Front-End Developer Professional Certificate",
-    issuer: "Meta (Coursera)",
-    date: "2024",
-    credentialId: "META-FE-984210",
-    link: "https://coursera.org/verify/professional-cert/meta-frontend",
-    skills: ["React.js", "Advanced JavaScript", "Web UX", "Version Control"]
-  },
-  {
-    id: 2,
-    title: "AWS Certified Developer – Associate",
-    issuer: "Amazon Web Services",
-    date: "2023",
-    credentialId: "AWS-DEV-771239",
-    link: "https://aws.amazon.com/verification",
-    skills: ["AWS S3", "Lambda", "DynamoDB", "Cloud Deployment"]
-  },
-  {
-    id: 3,
-    title: "Full-Stack Web Development Bootcamp",
-    issuer: "Udemy",
-    date: "2023",
-    credentialId: "UC-991823-FULLSTACK",
-    link: "https://udemy.com/certificate/UC-991823",
-    skills: ["Node.js", "Express", "MongoDB", "REST APIs", "React"]
-  },
-  {
-    id: 4,
-    title: "UI/UX Design Specialization",
-    issuer: "Google UX Design",
-    date: "2022",
-    credentialId: "G-UX-554109",
-    link: "https://coursera.org/verify/google-ux",
-    skills: ["Figma", "User Research", "Wireframing", "Prototyping"]
+    title: "Full Stack AI Engineer Internship Certificate",
+    issuer: "Falcon Swift Software House",
+    date: "3 Months (Nov 2024 - Jan 2025)",
+    credentialId: "FALCON-AI-2025-098",
+    skills: ["Python", "Full Stack Development", "AI/ML Integration", "React.js", "FastAPI", "REST APIs"],
+    link: "https://falconswift.com/verify/FALCON-AI-2025-098"
   }
 ];
+

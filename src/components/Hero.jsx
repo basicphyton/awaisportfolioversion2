@@ -188,7 +188,7 @@ const Hero = ({ onOpenCVModal }) => {
                 </div>
                 <div>
                   <div className="text-[10px] text-[var(--color-muted)] font-bold uppercase">Experience</div>
-                  <div className="text-xs font-bold text-white">3+ Years Pro</div>
+                  <div className="text-xs font-bold text-white">2+ Years Pro</div>
                 </div>
               </div>
 
